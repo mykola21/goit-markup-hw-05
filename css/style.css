@@ -20,6 +20,9 @@
   /* fonts */
   --text-family-roboto: "Roboto", sans-serif;
   --text-family-raleway: "Raleway", sans-serif;
+
+  /* transition: function; */
+  --turn-fast: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 *,
@@ -81,10 +84,6 @@ button {
 }
 
 .header {
-  position: sticky;
-  top: 0;
-  left: 0;
-  z-index: 1;
   width: 100%;
   background-color: var(--color-white);
   padding: 24px 0;
@@ -143,7 +142,7 @@ button {
 .header-phone:hover,
 .header-phone:focus {
   color: var(--color-ocean);
-  transition: color 200ms linear;
+  transition: color var(--turn-fast);
 }
 
 .header-link.current::after {
@@ -222,7 +221,7 @@ button {
 .btn-hero:focus {
   background-color: var(--color-ocean);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  transition: background-color 200ms ease-in, box-shadow 200ms ease-in;
+  transition: background-color var(--turn-fast), box-shadow var(--turn-fast);
 }
 
 /* Our-future section */
@@ -353,7 +352,7 @@ button {
 .contacts-link:hover,
 .contacts-link:focus {
   background-color: var(--color-ocean);
-  transition: background-color 250ms ease;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contacts-icon {
@@ -406,12 +405,12 @@ button {
 .custom-link:hover .custom-icon,
 .custom-link:focus .custom-icon {
   fill: var(--color-ocean);
-  transition: fill 900ms linear;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .custom-link:hover {
   border: 1px solid var(--color-ocean);
-  transition: border 200ms linear;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /**
@@ -453,8 +452,10 @@ button {
   border: 1px solid var(--color-ocean);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
-  transition: background-color 250ms linear, color 250ms linear,
-    border 250ms linear, box-shadow 250ms linear;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition-delay: 100ms;
 }
 
@@ -511,7 +512,7 @@ button {
 .portfolio-item-link:hover .overlay,
 .portfolio-item-link:focus .overlay {
   transform: translatex(0);
-  transition: transform 250ms linear;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .frame-subtitle {
@@ -524,7 +525,7 @@ button {
 .portfolio-item-link:focus {
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
-  transition-duration: 250ms;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .our-product-name {
@@ -625,8 +626,7 @@ button {
 .footer-contacts-link:hover,
 .footer-contacts-link:focus {
   background-color: var(--color-green);
-  transition-duration: 250ms;
-  transition-delay: 100ms;
+  transition: background-color var(--turn-fast);
 }
 
 /**
@@ -642,19 +642,23 @@ button {
   bottom: 0;
 
   background-color: rgba(46, 47, 66, 0.4);
+
+  transition: opacity var(--turn-fast), visibility var(--turn-fast);
 }
 
 .backdrop.is-hidden {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
+  transition-delay: 250ms;
 }
 
 .modal {
   position: absolute;
-  top: 88px;
-  left: calc(50% - 204px);
+  top: 50%;
+  left: 50%;
 
+  transform: translate(-50%, -50%);
   width: 408px;
   min-height: 576px;
   background-color: var(--color-modal);
@@ -662,6 +666,7 @@ button {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
     0px 2px 1px rgba(0, 0, 0, 0.2);
 }
+
 .modal-btm {
   position: absolute;
   top: 24px;
@@ -681,7 +686,7 @@ button {
 .modal-btm:hover {
   background-color: var(--color-ocean);
   fill: var(--color-white);
-  transition: background-color 300ms ease-in;
+  transition: background-color var(--turn-fast), fill var(--turn-fast);
 }
 
 .modal-icon {
