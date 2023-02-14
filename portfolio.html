@@ -21,22 +21,24 @@
   </head>
   <body>
     <!-- header -->
-    <header class="header">
+    <header>
       <!-- menu nav -->
-      <div class="container headernavi">
+      <div class="headernavi container">
         <nav class="header-nav">
           <a class="header-logo" href="./index.html">
             Web<span class="header-logo-studio">Studio</span>
           </a>
           <ul class="header-list">
             <li class="header-item">
-              <a class="header-link" href="./index.html">Studio</a>
+              <a class="header-link current" href="./index.html">Studio</a>
             </li>
             <li class="header-item">
-              <a class="header-link" href="./portfolio.html">Portfolio</a>
+              <a class="header-link current" href="./portfolio.html"
+                >Portfolio</a
+              >
             </li>
             <li class="header-item">
-              <a class="header-link" href="">Contacts</a>
+              <a class="header-link current" href="">Contacts</a>
             </li>
           </ul>
         </nav>
@@ -80,13 +82,22 @@
           <ul class="portfolio-filter">
             <li class="portfolio-item">
               <a class="portfolio-item-link" href="#">
-                <img
-                  src="./images/Portfolio/banking_app_.jpg"
-                  alt="Bankink app interface"
-                  width="360px"
-                  height="300px"
-                  class="our-product-img"
-                />
+                <div class="overlay-wrap">
+                  <img
+                    src="./images/Portfolio/banking_app_.jpg"
+                    alt="Bankink app interface"
+                    width="360px"
+                    height="300px"
+                    class="our-product-img"
+                  />
+                  <div class="overlay">
+                    <p>
+                      14 Stylish and User-Friendly App Design Concepts · Task
+                      Manager App · Calorie Tracker App · Exotic Fruit Ecommerce
+                      App · Cloud Storage App
+                    </p>
+                  </div>
+                </div>
                 <div class="frame-subtitle">
                   <h2 class="our-product-name">
                     Banking App Interface Concept

@@ -23,20 +23,22 @@
     <!-- header  -->
     <header class="header">
       <!-- menu nav -->
-      <div class="container headernavi">
+      <div class="headernavi container">
         <nav class="header-nav">
           <a class="header-logo" href="./index.html">
             Web<span class="header-logo-studio">Studio</span>
           </a>
           <ul class="header-list">
             <li class="header-item">
-              <a class="header-link" href="./index.html">Studio</a>
+              <a class="header-link current" href="./index.html">Studio</a>
             </li>
             <li class="header-item">
-              <a class="header-link" href="./portfolio.html">Portfolio</a>
+              <a class="header-link current" href="./portfolio.html"
+                >Portfolio</a
+              >
             </li>
             <li class="header-item">
-              <a class="header-link" href="">Contacts</a>
+              <a class="header-link current" href="">Contacts</a>
             </li>
           </ul>
         </nav>
@@ -590,5 +592,17 @@
         </div>
       </div>
     </footer>
+
+    <!-- Modal Window -->
+    <div class="backdrop is-hidden">
+      <div class="modal">
+        <button class="modal-btm" type="buttom">
+          <svg class="modal-icon" width="8" height="8">
+            <use href="./images/icons.svg#icon-close"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <script src="./js/header.js"></script>
   </body>
 </html>
