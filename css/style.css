@@ -444,7 +444,6 @@ button {
   color: var(--color-iris);
   padding: 12px 24px;
 }
-
 .menu-list-button:hover,
 .menu-list-button:focus {
   background-color: var(--color-ocean);
@@ -607,6 +606,7 @@ button {
   gap: 24px;
   padding: 0;
   margin: 0;
+  margin-right: 80px;
 }
 
 .footer-contacts-link {
@@ -627,6 +627,47 @@ button {
 .footer-contacts-link:focus {
   background-color: var(--color-green);
   transition: background-color var(--turn-fast);
+}
+
+.subscribe-wraper {
+}
+
+.subscribe-badge {
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: calc(24 / 16);
+  letter-spacing: 0.02em;
+  color: var(--color-white);
+  margin-bottom: 16px;
+}
+
+.subscribe-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+}
+
+.subscribe-container {
+}
+
+.subscribe-field {
+}
+
+.subscribe-input {
+  width: 264px;
+  height: 40px;
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+}
+
+.send-icon {
+}
+
+.subscribe-btn {
 }
 
 /**
@@ -667,7 +708,7 @@ button {
     0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
-.modal-btm {
+.modal-btn {
   position: absolute;
   top: 24px;
   right: 24px;
@@ -683,7 +724,7 @@ button {
   padding: 0;
 }
 
-.modal-btm:hover {
+.modal-btn:hover {
   background-color: var(--color-ocean);
   fill: var(--color-white);
   transition: background-color var(--turn-fast), fill var(--turn-fast);
@@ -691,4 +732,8 @@ button {
 
 .modal-icon {
   fill: var(--color-black);
+}
+
+label {
+  display: block;
 }
